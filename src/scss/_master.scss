@@ -1,6 +1,7 @@
 $primary-color: rgb(32, 32, 32);
 $primary-textcolor: rgb(255, 255, 255);
 $secondary-color: rgb(123, 112, 92);
+$main-color:rgb(192,168,32);
 
 @mixin lognavButton {
   margin-top: 10px;
@@ -11,7 +12,6 @@ $secondary-color: rgb(123, 112, 92);
   cursor: pointer;
   vertical-align: middle;
   border: 1px solid $primary-color;
-  max-width: 100px;
   padding: 5px;
   text-align: center;
 }
