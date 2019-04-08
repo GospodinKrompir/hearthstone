@@ -1,0 +1,17 @@
+@import "./master";
+
+nav {
+ margin-left: 15px;
+ display: flex;
+ height: 33px;
+}
+.navButton {
+  @include lognavButton();
+  margin-top: 0;
+}
+
+.navButton:active {
+  @include lognavButtonActive();
+}
+
+.search {display: flex;margin-left: auto; margin-right: 15px}

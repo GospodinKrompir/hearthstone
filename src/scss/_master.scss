@@ -1,3 +1,22 @@
-$primary-color:rgb(32, 32, 32);
+$primary-color: rgb(32, 32, 32);
 $primary-textcolor: rgb(255, 255, 255);
-$secondary-color:rgb(123, 112, 92);
+$secondary-color: rgb(123, 112, 92);
+
+@mixin lognavButton {
+  margin-top: 10px;
+  width: 80px;
+  border-radius: 5%;
+  background: $secondary-color;
+  user-select: none;
+  cursor: pointer;
+  vertical-align: middle;
+  border: 1px solid $primary-color;
+  max-width: 100px;
+  padding: 5px;
+  text-align: center;
+}
+
+@mixin lognavButtonActive {
+  border: 1px solid $primary-textcolor;
+  box-shadow: 0 0 5px -1px rgba(255, 255, 255, 0.8);
+}
