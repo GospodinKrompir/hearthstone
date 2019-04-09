@@ -1,8 +1,10 @@
 @import "./master";
 nav {
  margin-left: 15px;
+ margin-right: 15px;
  display: flex;
  height: 33px;
+ padding-bottom: 5px;
 }
 .navButton {
   @include lognavButton();
@@ -13,4 +15,4 @@ nav {
   @include lognavButtonActive();
 }
 
-.search {display: flex;margin-left: auto; margin-right: 15px}
+.search {display: flex;margin-left: auto;}

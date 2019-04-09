@@ -13,13 +13,13 @@ form {
   }
   div {
     padding: 15px 15px 0px 15px;
-    .signinForm {
+    .signinForm, .resetPass {
       @include lognavButton();
       display: inline-block;
       border-radius: 2%;
-      width: 450px;
+      width: 400px;
     }
-    .signinForm:active {
+    .signinForm:active, .resetPass:active {
       @include lognavButtonActive();
     }
   }
@@ -34,7 +34,5 @@ span {
 }
 main {
   background: url(../img/mainbgd.jpg) center;
-
-  margin: 5px 0px;
   text-align: center;
 }
