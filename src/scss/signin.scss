@@ -19,6 +19,9 @@ form {
       border-radius: 2%;
       width: 400px;
     }
+    .signinForm:hover, .resetPass:hover {
+      background: $blizzard-color;
+    }
     .signinForm:active, .resetPass:active {
       @include lognavButtonActive();
     }

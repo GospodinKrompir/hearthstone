@@ -42,6 +42,11 @@ header {
 .logout {
   @include lognavButton();
 }
+.register:hover,
+.signin:hover,
+.logout:hover {
+  background: $blizzard-color;
+}
 .register:active,
 .signin:active,
 .logout:active {

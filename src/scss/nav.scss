@@ -10,7 +10,9 @@ nav {
   @include lognavButton();
   margin-top: 0;
 }
-
+.navButton:hover{
+  background:$blizzard-color;
+}
 .navButton:active {
   @include lognavButtonActive();
 }

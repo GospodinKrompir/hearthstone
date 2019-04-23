@@ -3,6 +3,7 @@ import "./App.scss";
 import Header from './components/header';
 import Nav from './components/nav';
 import SignIn from './components/signin';
+import Footer from './components/footer'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
       <Header/>
       <Nav/>
       {view}
+      <Footer/>
       </div>
     );
   }
