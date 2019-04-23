@@ -13,16 +13,16 @@ form {
   }
   div {
     padding: 15px 15px 0px 15px;
-    .signinForm, .resetPass {
+    .signinForm, .resetPass, .registerButton {
       @include lognavButton();
       display: inline-block;
       border-radius: 2%;
       width: 400px;
     }
-    .signinForm:hover, .resetPass:hover {
+    .signinForm:hover, .resetPass:hover, .registerButton:hover {
       background: $blizzard-color;
     }
-    .signinForm:active, .resetPass:active {
+    .signinForm:active, .resetPass:active, .registerButton:active {
       @include lognavButtonActive();
     }
   }

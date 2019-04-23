@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../scss/signin.scss';
+import '../scss/reg-signin.scss';
 
 class SignIn extends Component {
     constructor() {
@@ -28,7 +28,7 @@ class SignIn extends Component {
                     {isClicked ?
                         <React.Fragment>
                             <div>
-                                <label><span>E-mail:</span><input type="text" size="16" placeholder="E-mail"></input></label>
+                                <label><span>Email:</span><input type="text" size="16" placeholder="Email"></input></label>
                             </div>
                             <div>
                                 <label><span>Password:</span><input type="password" size="16" placeholder="Password"></input></label>
