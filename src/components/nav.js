@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import '../scss/nav.scss';
+import {NavLink} from 'react-router-dom'
 
 class Nav extends Component {
     render() {
+        let style={ textDecoration: 'none', color: 'white' }
         return (
             <nav>
-               <div className="navButton">GAME</div>
-               <div className="navButton">CARDS</div>
-               <div className="navButton">DECKS</div>
-               <div className="navButton">DBUILDER</div>
-               <div className="navButton">ABOUT</div>
+            <NavLink to="/game/" style ={style}><div className="navButton">GAME</div></NavLink>
+            <NavLink to="/cards/" style ={style}><div className="navButton">CARDS</div></NavLink>
+            <NavLink to="/decks/" style ={style}><div className="navButton">DECKS</div></NavLink>
+            <NavLink to="/dbuilder/" style ={style}><div className="navButton">DBUILDER</div></NavLink>
+            <NavLink to="/about/" style ={style}><div className="navButton">ABOUT</div></NavLink>
                <div className="search">
                <input type="search"/><div className="navButton">SEARCH</div>
                </div>

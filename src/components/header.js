@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../scss/header.scss';
-import logo from '../img/logo.png'
+import logo from '../img/logo.png';
+import {Link} from 'react-router-dom'
 
 class Header extends Component {
     constructor() {
@@ -18,8 +19,8 @@ class Header extends Component {
                 <div className="banner"></div>
                 {isLogged ? <div className="login"><div className="displayName">LALALALALALALA</div>
                     <div onClick={this.onClick.bind(this)} className="logout">LOGOUT</div></div> :
-                    <div className="login"> <div onClick={this.onClick.bind(this)} className="signin">SIGN IN</div>
-                        <div className="register">REGISTER</div>
+                    <div className="login"><Link style={{ textDecoration: 'none', color: 'white' }} to="/signin/"> <div className="signin">SIGN IN</div></Link>
+                        <Link style={{ textDecoration: 'none', color: 'white' }} to="/register/"><div className="register">REGISTER</div></Link>
                     </div>
                 }
             </header>
