@@ -5,7 +5,6 @@ $blizzard-color:rgb(64, 168, 248);
 $orange-color:rgb(255, 150, 50);
 
 @mixin lognavButton {
-  margin-top: 10px;
   width: 80px;
   border-radius: 5%;
   background: $secondary-color;
