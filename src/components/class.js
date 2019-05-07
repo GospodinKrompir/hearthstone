@@ -9,6 +9,7 @@ class Class extends Component {
             cards: []
         }
         this.url = this.props.match.params.class.charAt(0).toUpperCase() + this.props.match.params.class.slice(1);
+        this.bg = require(`../img/${this.url}.jpg`)
     }
 
     filterCards =(cards)=>{
@@ -21,7 +22,7 @@ class Class extends Component {
         return (
             <React.Fragment>
             <CardsFilter getUrl={this.url} getCards={this.filterCards}/>
-            <main>   
+            <main style={{ backgroundImage: "url("+this.bg+")"}}>   
                 {view}
             </main>
             </React.Fragment>

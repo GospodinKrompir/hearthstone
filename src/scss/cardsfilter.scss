@@ -1,0 +1,35 @@
+@import "./master";
+article {
+  background-size: cover;
+  background-position: center;
+  select {
+    background-color: $primary-color;
+    color: $primary-textcolor;
+    font-size: 20px;
+    margin: 25px 10px;
+  }
+  option {
+    background-color: $primary-color;
+    color: $primary-textcolor;
+  }
+}
+.filterButton {
+  @include lognavButton();
+  margin-bottom: 25px;
+  color: $primary-textcolor;
+  width: 100px;
+}
+.filterButton:hover {
+  background: $blizzard-color;
+}
+.filterButton:active {
+  @include lognavButtonActive();
+}
+#classArt {
+  h2 {
+    background-color: $primary-color;
+    font-size: 30px;
+    border-top: solid 1px $orange-color;
+    border-bottom   : solid 1px $orange-color;
+  }
+}

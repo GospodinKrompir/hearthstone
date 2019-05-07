@@ -23,11 +23,11 @@ class App extends Component {
           <Nav />
           <Switch>
             <Route exact path="/" />
-            <Route exact path="/signin/" component={SignIn} />
-            <Route exact path="/register/" component={Register} />
+            <Route path="/signin/" component={SignIn} />
+            <Route path="/register/" component={Register} />
             <Route exact path="/game/" component={Game} />
             <Route exact path="/classes/" component={Classes} />
-            <Route exact path="/classes/:class" component={Class} />
+            <Route path="/classes/:class" component={Class} />
             <Route path="/:name" component={Card}/>
           </Switch>
           <Footer />

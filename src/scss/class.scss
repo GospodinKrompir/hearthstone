@@ -1,1 +1,7 @@
-main img {width: 230px; height: 348px;}
+main {
+  background-size: contain;
+  img {
+    width: 230px;
+    height: 348px;
+  }
+}

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import '../scss/cardsfilter.scss'
 import { getCardsByClass } from './Api'
 
 class CardsFilter extends Component {
   constructor(props) {
     super(props);
     this.state = { cards: [], manacost: "All Mana Cost", rarity: "All Rarities", type:"All Types", attack: "All Attacks", health: "All HP" };
-
+    this.bg = require(`../img/${this.props.getUrl}.jpg`)
   }
   handleChange(e) {
     this.setState({ [e.target.id]: e.target.value })
@@ -62,7 +63,7 @@ class CardsFilter extends Component {
 
   render() {
     return (
-      <div>
+      <article id="classArt" style={{ backgroundImage: "url("+this.bg+")" }}>
         <select id="manacost" onChange={this.handleChange.bind(this)} value={this.state.manacost}>
           <option value="All Mana Cost">All Mana Cost</option>
           <option value="0">0</option>
@@ -119,9 +120,9 @@ class CardsFilter extends Component {
           <option value="9">9</option>
           <option value="10">10</option>
         </select>
-        <h2>{this.state.manacost}{this.state.rarity}</h2>
-        <button type="button" onClick={this.filterCards.bind(this)}>Click</button>
-      </div>
+        <h2>{this.props.getUrl.toUpperCase()}</h2>
+        <button type="button" className="filterButton" onClick={this.filterCards.bind(this)}>Click</button>
+      </article>
     );
   }
 }

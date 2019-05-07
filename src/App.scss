@@ -5,8 +5,15 @@
   background-color: $primary-color;
   color: $primary-textcolor;
 }
-
 main {
   min-height: 60vh;
+}
+article,
+main {
   overflow: hidden;
+  text-align: center;
+  margin-top: 50px;
+  border-style: solid;
+  border-color: $orange-color;
+  border-width: 1px;
 }

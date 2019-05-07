@@ -55,12 +55,12 @@ class Game extends Component {
                                 Single player modes are modes like tutorial, adventure mode and missions. Multiplayer modes are
                                 play mode, arena, tavern brawl and friendly challenge.</p>
                         </div>
-                        <div className="slideshow" id="gmodes"><Slides slide="slide1" images={this.firstSlide}></Slides></div>
+                        <div className="slideshow"><Slides slide="slide1" images={this.firstSlide}></Slides></div>
                     </div>
                 </article>
                 <article className="art2" id="art2">
                     <div className="maindivmarg">
-                        <div className="slideshow" id="brawlic"><Slides slide="slide2" images={this.secondSlide}></Slides></div>
+                        <div className="slideshow"><Slides slide="slide2" images={this.secondSlide}></Slides></div>
                         <div className="tekst">
                             <h1>TAVERN BRAWL</h1>
                             <p>Tavern Brawl is one of Hearthstone's lighter game modes. A weekly event, a new Tavern Brawl begins
@@ -79,12 +79,12 @@ class Game extends Component {
                                 their Hero Power and which class-specific cards they are able to play. While each hero belongs to only one class,
                                 there are often multiple heroes representing each class. </p>
                         </div>
-                        <div className="slideshow" id="roles"><Slides slide="slide3" images={this.thirdSlide}></Slides></div>
+                        <div className="slideshow"><Slides slide="slide3" images={this.thirdSlide}></Slides></div>
                     </div>
                 </article>
                 <article className="art4" id="art4">
                     <div className="maindivmarg">
-                        <div className="slideshow" id="maps"><Slides slide="slide4" images={this.fourthSlide}></Slides></div>
+                        <div className="slideshow"><Slides slide="slide4" images={this.fourthSlide}></Slides></div>
                         <div className="tekst">
                             <h1>CARD SETS</h1>
                             <p>Card sets are categories into which collectible cards are divided, reflecting how they can be obtained,

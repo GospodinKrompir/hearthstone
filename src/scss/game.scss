@@ -1,14 +1,6 @@
 @import "./master";
 
-article,
-main {
-  background-color: rgba(5, 0, 0, 0.5);
-  text-align: center;
-  margin-top: 50px;
-  border-style: solid;
-  border-color: rgba(128, 141, 255, 0.35);
-  border-width: 1px;
-}
+
 .maindivmarg {
   margin: 50px 50px;
   display: flex;
