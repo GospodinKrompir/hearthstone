@@ -17,7 +17,7 @@ let getCards = async () => {
     return card;
   }
   let getCardsByClass = async (name) => {
-    const responseCard = await axios.get(`${serverUrl}/classes/${name}`, {headers});
+    const responseCard = await axios.get(`${serverUrl}/classes/${name}?collectible=1`, {headers});
     const card = await responseCard.data;
     return card;
   }

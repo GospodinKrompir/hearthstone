@@ -1,0 +1,98 @@
+@import "./master";
+
+article,
+main {
+  background-color: rgba(5, 0, 0, 0.5);
+  text-align: center;
+  margin-top: 50px;
+  border-style: solid;
+  border-color: rgba(128, 141, 255, 0.35);
+  border-width: 1px;
+}
+.maindivmarg {
+  margin: 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.slideshow,
+.maindivs {
+  width: 600px;
+  height: 338px;
+  box-shadow: 0 0 15px $primary-textcolor;
+  border: 1px solid $primary-textcolor;
+  span {
+    display: inherit;
+    width: inherit;
+    height: inherit;
+    overflow: hidden;
+    img {
+      width: inherit;
+    }
+  }
+}
+
+.maindivs {
+  width: 525px;
+  position: relative;
+}
+.maintp {
+  width: 525px;
+  font-size: 32px;
+  background-color: $primary-color;
+  opacity: 0.8;
+  line-height: 100px;
+  position: absolute;
+  top: 25%;
+}
+.tekst h1,
+.tekst h2,
+.tekst h3,
+.tekst p,
+main div p {
+  color: $primary-textcolor;
+}
+
+.tekst {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: inline-block;
+  max-width: 450px;
+  background-color: $primary-color;
+  padding: 15px;
+  box-shadow: 0 0 15px $primary-textcolor;
+  border: 1px solid $primary-textcolor;
+  p {
+    font-size: 20px;
+  }
+}
+
+.slideshow,
+.tekst {
+  margin: 25px 10px;
+}
+.vis {
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.art1,.art2,.art3,.art4{
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+.art1 {
+    background-image: url("../img/artbg1.jpg"); 
+}
+
+.art2 {
+    background-image: url("../img/artbg2.jpg");
+}
+
+.art3 {
+    background-image: url("../img/artbg3.jpg");
+}
+
+.art4 {
+    background-image: url("../img/artbg4.jpg");
+}
