@@ -24,8 +24,7 @@ class Slides extends Component {
      
             this.timeout = setTimeout(function () {
                 that.goTo()
-            }, 6000);
-        
+            }, 6000);      
     }
     goTo = () => {
         let index = 0;

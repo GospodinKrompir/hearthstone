@@ -6,8 +6,7 @@ class CardSet extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cards: [],
-           
+            cards: [],         
         }
         this.url = this.props.match.params.set
         this.img = this.url.replace(" ", "_")
@@ -18,8 +17,7 @@ class CardSet extends Component {
             this.img = this.img.replace("'", "_")
         }
         RegEx()
-        this.bg = require(`../img/${this.img}.jpg`)
-    
+        this.bg = require(`../img/${this.img}.jpg`)  
     }
    
     filterCards = (cards) => {

@@ -29,7 +29,6 @@ class Header extends Component {
                         <Link style={{ textDecoration: 'none', color: 'white' }} to="/register/"><div className="register">REGISTER</div></Link>
                     </div>
                 }
-
             </header>
         );
     }

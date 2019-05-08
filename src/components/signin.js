@@ -7,9 +7,8 @@ class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = { isLogged: false, isClicked: false, user: null };
-        this.userRef = React.createRef()
-        this.passRef = React.createRef()
-
+        this.userRef = React.createRef();
+        this.passRef = React.createRef();
     }
     resetClick() {
         this.setState({ isClicked: true })
@@ -24,10 +23,8 @@ class SignIn extends Component {
         })();
 
         if (this.state.user === this.userRef.value) {
-            console.log(this.userRef)
         }
     }
-
 
     render() {
         const isClicked = this.state.isClicked;

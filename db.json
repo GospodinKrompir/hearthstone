@@ -1,5 +1,16 @@
 {
-    "users": [
-      { "id": 1, "email":"alek@gmail.com", "username": "shadowche", "password": "Alex1234" }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "alek@gmail.com",
+      "username": "shadowche",
+      "password": "Alex1234"
+    },
+    {
+      "email": "lalalala",
+      "username": "lalalalal",
+      "password": "lalalalala",
+      "id": 2
+    }
+  ]
 }

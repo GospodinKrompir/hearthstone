@@ -8,8 +8,20 @@ const headers = {
 };
   let getUserName= async (name) => {
     const responseCard = await axios.get(`http://localhost:3001/users?username=${name}`, {headers});
-    const card = await responseCard.data;
-    return card;
+    const userName = await responseCard.data;
+    return userName;
+  }
+  let getUserEmail= async (email) => {
+    const responseCard = await axios.get(`http://localhost:3001/users?email=${email}`, {headers});
+    const userEmail = await responseCard.data;
+    return userEmail;
+  }
+  let updateUser = async(id,password)=>{
+    await axios.put(`http://localhost:3001/users/${id}`,password)
+
+  }
+  let postUser = async (user)=>{
+    await axios.post(`http://localhost:3001/users`, user)
   }
   let getCardsByClass = async (name) => {
     const responseCard = await axios.get(`${serverUrl}/classes/${name}?collectible=1`, {headers});
@@ -21,5 +33,5 @@ const headers = {
     const card = await responseCard.data;
     return card;
   }
-export { getUserName, getCardsByClass, getCardsBySet }
+export { getUserName,getUserEmail, postUser, updateUser, getCardsByClass, getCardsBySet }
 
