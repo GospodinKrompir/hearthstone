@@ -12,9 +12,6 @@ class Nav extends Component {
             <NavLink to="/sets/" style ={style}><div className="navButton">SETS</div></NavLink>
             <NavLink to="/dbuilder/" style ={style}><div className="navButton">DBUILDER</div></NavLink>
             <NavLink to="/about/" style ={style}><div className="navButton">ABOUT</div></NavLink>
-               <div className="search">
-               <input type="search"/><div className="navButton">SEARCH</div>
-               </div>
             </nav>
         );
     }

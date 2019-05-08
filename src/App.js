@@ -15,29 +15,38 @@ import Home from './components/home';
 
 
 class App extends Component {
-
-
+  constructor() {
+    super()
+    this.state = { islogged : false, name:"LogPlz" }
+  }
+  logCheck = (islogged,name) => {
+    this.setState({ islogged: islogged, name:name })
+  }
+  logOutCheck = ()=>{
+    this.setState({islogged:false, name:"LogPlz"})
+  }
   render() {
     return (
       <div className="App">
         <Router>
-          <Header />
+          <Header logged={this.state.islogged} name={this.state.name} logOut={this.logOutCheck} />
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/signin/" component={SignIn} />
-            <Route path="/register/" component={Register} />
-            <Route exact path="/game/" component={Game} />
-            <Route exact path="/classes/" component={Classes} />
-            <Route path="/classes/:class" component={Class} />
-            <Route exact path="/sets/" component={CardSets} />
-            <Route exact path="/sets/:set" component={CardSet} />
+            <Route path="/signin/" render={(routeProps) =>
+              <SignIn {...routeProps} logCheck={this.logCheck}/>}/>
+              <Route path="/register/" component={Register} />
+              <Route exact path="/game/" component={Game} />
+              <Route exact path="/classes/" component={Classes} />
+              <Route path="/classes/:class" component={Class} />
+              <Route exact path="/sets/" component={CardSets} />
+              <Route exact path="/sets/:set" component={CardSet} />
           </Switch>
           <Footer />
         </Router>
       </div>
-    );
-  }
-}
-
-export default App;
+        );
+      }
+    }
+    
+    export default App;

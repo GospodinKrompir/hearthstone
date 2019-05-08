@@ -6,13 +6,8 @@ const headers = {
   "X-RapidAPI-Host": "omgvamp-hearthstone-v1.p.rapidapi.com",
   "X-RapidAPI-Key": "f62ffa1bc8msh976f8f29ec748cfp1fe02fjsn4468196bf9dc",
 };
-let getCards = async () => {
-    const responseCards = await axios.get(`${serverUrl}`, {headers});
-    const cards = await responseCards.data;
-    return cards;
-  }
-  let getCard = async (name) => {
-    const responseCard = await axios.get(`${serverUrl}/${name}`, {headers});
+  let getUserName= async (name) => {
+    const responseCard = await axios.get(`http://localhost:3001/users?username=${name}`, {headers});
     const card = await responseCard.data;
     return card;
   }
@@ -26,5 +21,5 @@ let getCards = async () => {
     const card = await responseCard.data;
     return card;
   }
-export {getCards, getCard, getCardsByClass, getCardsBySet }
+export { getUserName, getCardsByClass, getCardsBySet }
 
