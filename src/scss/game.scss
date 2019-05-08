@@ -90,6 +90,6 @@ main div p {
 }
 
 @media (min-width: 468px) and (max-width: 767px) {
-    .maindivs, .slideshow, .maintp{width: 420px; min-height: 300px;}
-    .maintp{min-height: 50px}
+  .slideshow{display: inline-block; width:400px; height: 210px; span{height: 100%;} }
+    
   }
