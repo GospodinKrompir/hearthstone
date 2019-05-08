@@ -52,3 +52,6 @@ video {
     background: url('../img/latestset.jpg') no-repeat center;
     background-size: cover;
 }
+@media (min-width: 468px) and (max-width: 767px) {
+    video{min-width: 400px;}
+  }

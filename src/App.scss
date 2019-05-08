@@ -17,3 +17,8 @@ main {
   border-color: $orange-color;
   border-width: 1px;
 }
+
+@media (min-width: 468px) and 
+       (max-width: 767px){
+         .App{min-width:468px ;}
+       }

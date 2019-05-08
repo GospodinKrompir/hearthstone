@@ -40,3 +40,9 @@ footer {
 .instagram{background-position-x: 215px}
 
 .twitter{background-position: 108px 100px}
+
+@media (min-width: 468px) and (max-width: 767px) {
+    footer{height: 400px; flex-wrap: wrap;
+    .blizzardLogo{order:3; margin:25px;}
+.termsInfo{text-align: left}}
+  }

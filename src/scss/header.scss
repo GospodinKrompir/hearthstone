@@ -52,3 +52,15 @@ header {
 .logout:active {
   @include lognavButtonActive;
 }
+
+@media (min-width: 468px) and (max-width: 767px) {
+  header {
+    height: 260px;
+    flex-wrap: wrap;
+    justify-content: center;
+    .banner{order:1};
+    .logo,.login{margin:0 25px; order:3}
+    }
+    
+  
+}

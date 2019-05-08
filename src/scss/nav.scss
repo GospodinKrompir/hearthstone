@@ -16,4 +16,8 @@ nav {
 .navButton:active {
   @include lognavButtonActive();
 }
-  
+
+@media (min-width: 468px) and (max-width: 767px) {
+  nav{justify-content: center}
+ .navButton{width: 72px}
+}

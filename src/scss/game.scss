@@ -88,3 +88,8 @@ main div p {
 .art4 {
     background-image: url("../img/artbg4.jpg");
 }
+
+@media (min-width: 468px) and (max-width: 767px) {
+    .maindivs, .slideshow, .maintp{width: 420px; min-height: 300px;}
+    .maintp{min-height: 50px}
+  }
