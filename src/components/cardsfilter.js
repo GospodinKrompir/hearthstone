@@ -3,6 +3,7 @@ import '../scss/cardsfilter.scss'
 import { getCardsByClass } from './Api'
 
 class CardsFilter extends Component {
+  _isMounted = false;
   constructor(props) {
     super(props);
     this.state = { cards: [], manacost: "All Mana Cost", rarity: "All Rarities", type:"All Types", attack: "All Attacks", health: "All HP" };
@@ -10,7 +11,6 @@ class CardsFilter extends Component {
   }
   handleChange(e) {
     this.setState({ [e.target.id]: e.target.value })
-    console.log(this.state.manacost)
   }
   filterCards = () => {
     let cards = this.state.cards;
@@ -45,22 +45,24 @@ class CardsFilter extends Component {
     } else if (this.state.health !== "All HP") {
       newCards.map(e => e.health === parseInt(this.state.health) && (pomCards.push(e)));
       newCards = pomCards.slice()
-      console.log(newCards)
     }
     if (newCards.length === 0 && (this.state.type !== "All Types" || this.state.rarity !== "All Rarities" || this.state.manacost !== "All Mana Cost"||this.state.health !== "All HP" ||this.state.attack !== "All Attacks")) newCards = []
     else if (newCards.length === 0) newCards = cards.slice()
-    console.log(newCards)
-    console.log(this.state.cards)
     this.props.getCards(newCards)
   }
   componentDidMount() {
+    this._isMounted = true;
     (async () => {
       let cards = await getCardsByClass(this.props.getUrl);
+      if(this._isMounted){
       this.setState({ cards: cards });
       this.filterCards()
+      }
     })();
   }
-
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
   render() {
     return (
       <article id="classArt" style={{ backgroundImage: "url("+this.bg+")" }}>
@@ -121,7 +123,7 @@ class CardsFilter extends Component {
           <option value="10">10</option>
         </select>
         <h2>{this.props.getUrl.toUpperCase()}</h2>
-        <button type="button" className="filterButton" onClick={this.filterCards.bind(this)}>Click</button>
+        <button type="button" className="filterButton" onClick={this.filterCards.bind(this)}>FILTER</button>
       </article>
     );
   }

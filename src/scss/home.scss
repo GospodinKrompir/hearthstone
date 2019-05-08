@@ -1,0 +1,54 @@
+@import "./master";
+
+video {
+    min-width:700px;
+    width: 80vw;
+    margin:50px 0;
+}
+.kvad {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+#art{
+    background: url('../img/mainartbg.jpg') no-repeat center;
+    background-size: cover;
+    a{display:inline-block; margin: 50px;}
+}
+#art:hover {
+    opacity: 1;
+}
+.art1p {
+    color: $primary-textcolor;
+    font-size: 18px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top: 35px;
+    background-color: $primary-color
+}
+
+.art2sl {
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    border: 3px solid;
+    border-color: $primary-textcolor;
+}
+
+#cotm:hover,  #set:hover,  #ros:hover {
+    opacity: 1;
+}
+
+#ros{
+    background: url('../img/riseofshadows.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#cotm{
+    background: url('../img/Warrior.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#set{
+    background: url('../img/latestset.jpg') no-repeat center;
+    background-size: cover;
+}

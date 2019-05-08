@@ -15,7 +15,7 @@ class Header extends Component {
         const isLogged = this.state.isLogged
         return (
             <header>
-                <div className="logo"><img src={logo} alt="logo"></img></div>
+                <div className="logo"><Link style={{ textDecoration: 'none', color: 'white' }} to="/"><img src={logo} alt="logo"></img></Link></div>
                 <div className="banner"></div>
                 {isLogged ? <div className="login"><div className="displayName">LALALALALALALA</div>
                     <div onClick={this.onClick.bind(this)} className="logout">LOGOUT</div></div> :

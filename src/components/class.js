@@ -14,7 +14,6 @@ class Class extends Component {
 
     filterCards =(cards)=>{
         this.setState({cards:cards})
-        console.log(cards)
     }
     
     render() {

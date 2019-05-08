@@ -9,7 +9,8 @@ import Register from './components/register';
 import Game from './components/game';
 import Classes from './components/classes';
 import Class from './components/class';
-import Card from './components/card'
+import Card from './components/card';
+import Home from './components/home';
 
 
 class App extends Component {
@@ -22,7 +23,7 @@ class App extends Component {
           <Header />
           <Nav />
           <Switch>
-            <Route exact path="/" />
+            <Route exact path="/" component={Home} />
             <Route path="/signin/" component={SignIn} />
             <Route path="/register/" component={Register} />
             <Route exact path="/game/" component={Game} />

@@ -46,7 +46,6 @@ class Game extends Component {
                 </main>
                 <article className="art1" id="art1">
                     <div className="maindivmarg">
-
                         <div className="tekst">
                             <h1>GAME MODES</h1>
                             <p>Game modes are the ways in which players can do battle in Hearthstone.
