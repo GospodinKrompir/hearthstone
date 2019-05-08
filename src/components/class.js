@@ -20,7 +20,7 @@ class Class extends Component {
         let view = this.state.cards.map(element => element.type !== "Hero" && <img key={element.name} src={element.img} alt={element.name} onError={e => e.target.style.display = 'none'}></img>)
         return (
             <React.Fragment>
-            <CardsFilter getUrl={this.url} getCards={this.filterCards}/>
+            <CardsFilter getImg={this.url} getUrl={this.url} getCards={this.filterCards}/>
             <main style={{ backgroundImage: "url("+this.bg+")"}}>   
                 {view}
             </main>

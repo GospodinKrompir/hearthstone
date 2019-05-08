@@ -21,10 +21,10 @@ let getCards = async () => {
     const card = await responseCard.data;
     return card;
   }
-  let getCardsByQuality = async (name) => {
-    const responseCard = await axios.get(`${serverUrl}/qualities/${name}`, {headers});
+  let getCardsBySet = async (name) => {
+    const responseCard = await axios.get(`${serverUrl}/sets/${name}?collectible=1`, {headers});
     const card = await responseCard.data;
     return card;
   }
-export {getCards, getCard, getCardsByClass, getCardsByQuality }
+export {getCards, getCard, getCardsByClass, getCardsBySet }
 

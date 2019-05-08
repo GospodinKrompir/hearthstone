@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import '../scss/cardsfilter.scss'
-import { getCardsByClass } from './Api'
+import { getCardsByClass, getCardsBySet } from './Api'
 
 class CardsFilter extends Component {
   _isMounted = false;
   constructor(props) {
     super(props);
-    this.state = { cards: [], manacost: "All Mana Cost", rarity: "All Rarities", type:"All Types", attack: "All Attacks", health: "All HP" };
-    this.bg = require(`../img/${this.props.getUrl}.jpg`)
+    this.state = { cards: [], manacost: "All Mana Cost", rarity: "All Rarities", type: "All Types", attack: "All Attacks", health: "All HP" };
+    this.bg = require(`../img/${this.props.getImg}.jpg`)
   }
   handleChange(e) {
     this.setState({ [e.target.id]: e.target.value })
@@ -46,17 +46,21 @@ class CardsFilter extends Component {
       newCards.map(e => e.health === parseInt(this.state.health) && (pomCards.push(e)));
       newCards = pomCards.slice()
     }
-    if (newCards.length === 0 && (this.state.type !== "All Types" || this.state.rarity !== "All Rarities" || this.state.manacost !== "All Mana Cost"||this.state.health !== "All HP" ||this.state.attack !== "All Attacks")) newCards = []
+    if (newCards.length === 0 && (this.state.type !== "All Types" || this.state.rarity !== "All Rarities" || this.state.manacost !== "All Mana Cost" || this.state.health !== "All HP" || this.state.attack !== "All Attacks")) newCards = []
     else if (newCards.length === 0) newCards = cards.slice()
     this.props.getCards(newCards)
   }
   componentDidMount() {
     this._isMounted = true;
     (async () => {
-      let cards = await getCardsByClass(this.props.getUrl);
-      if(this._isMounted){
-      this.setState({ cards: cards });
-      this.filterCards()
+      if (this.props.cardSet === "cardSet") {
+        var cards = await getCardsBySet(this.props.getUrl);
+      } else {
+        cards = await getCardsByClass(this.props.getUrl);
+      }
+      if (this._isMounted) {
+        this.setState({ cards: cards });
+        this.filterCards()
       }
     })();
   }
@@ -65,7 +69,7 @@ class CardsFilter extends Component {
   }
   render() {
     return (
-      <article id="classArt" style={{ backgroundImage: "url("+this.bg+")" }}>
+      <article id="classArt" style={{ backgroundImage: "url(" + this.bg + ")" }}>
         <select id="manacost" onChange={this.handleChange.bind(this)} value={this.state.manacost}>
           <option value="All Mana Cost">All Mana Cost</option>
           <option value="0">0</option>

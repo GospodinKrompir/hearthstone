@@ -5,14 +5,14 @@ main {
   justify-content: center;
 }
 .itemBox {
-  margin: 25px;
+  margin: 50px;
 }
-.classNameplate{
-    @include lognavButton();
-    width:189px;
+.classNameplate {
+  @include lognavButton();
+  width: 189px;
 }
-.itemBox:active .classNameplate{
-    @include lognavButtonActive();
+.itemBox:active .classNameplate {
+  @include lognavButtonActive();
 }
 .itemBox:hover .classNameplate {
   background: $blizzard-color;
@@ -60,4 +60,47 @@ main {
 }
 .Neutral {
   background-position: 200px 200px;
+}
+.GvG,
+.TGT,
+.WotOG,
+.MSoG,
+.JtU,
+.KotFT,
+.KiC,
+.TW,
+.TBP {
+  width: 200px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  background-color: $primary-color;
+}
+
+.GvG {
+  background-image: url("../img/GvG.png");
+}
+.TGT {
+  background-image: url("../img/TGT.png");
+}
+.WotOG {
+  background-image: url("../img/WotOG.png");
+}
+.MSoG {
+  background-image: url("../img/MSoG.png");
+}
+.JtU {
+  background-image: url("../img/JtU.png");
+}
+.KotFT {
+  background-image: url("../img/KotFT.png");
+}
+.KiC {
+  background-image: url("../img/KiC.png");
+}
+.TW {
+  background-image: url("../img/TW.png");
+}
+.TBP {
+  background-image: url("../img/TBP.png");
 }

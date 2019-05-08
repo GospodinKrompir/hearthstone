@@ -9,7 +9,8 @@ import Register from './components/register';
 import Game from './components/game';
 import Classes from './components/classes';
 import Class from './components/class';
-import Card from './components/card';
+import CardSets from './components/cardsets';
+import CardSet from './components/cardset';
 import Home from './components/home';
 
 
@@ -29,7 +30,8 @@ class App extends Component {
             <Route exact path="/game/" component={Game} />
             <Route exact path="/classes/" component={Classes} />
             <Route path="/classes/:class" component={Class} />
-            <Route path="/:name" component={Card}/>
+            <Route exact path="/sets/" component={CardSets} />
+            <Route exact path="/sets/:set" component={CardSet} />
           </Switch>
           <Footer />
         </Router>
